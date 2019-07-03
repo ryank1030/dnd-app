@@ -1,0 +1,17 @@
+<div *ngIf="classes">
+  <h5>Class Count: {{classes.count}}</h5>
+  <table class="classes table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let result of classes.results">
+      <td>{{result.name}}</td>
+      <td>{{result.url}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

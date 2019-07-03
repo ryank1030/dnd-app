@@ -1,0 +1,24 @@
+<p>
+  spell-details works!
+</p>
+<div *ngIf="spell">
+  <table class="spell table table-striped">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{spell._id}}</td>
+    </tr>
+    <tr>
+      <td>{{spell.index}}</td>
+    </tr>
+    <tr>
+      <td>{{spell.name}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>

@@ -1,0 +1,17 @@
+<div *ngIf="spells">
+  <h5>Spell Count: {{spells.count}}</h5>
+  <table class="spells table table-striped table-hover">
+      <thead>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Url</th>
+      </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let result of spells.results; let i = index" (click)="goToSpellDetails(result.url, i+1)">
+          <td>{{result.name}}</td>
+          <td>{{result.url}}</td>
+        </tr>
+      </tbody>
+  </table>
+</div>
