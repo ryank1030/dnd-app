@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from "../../services/data-service";
+import { DataService } from "../../services/data-service";
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-class-list',
@@ -11,7 +12,8 @@ export class ClassListComponent implements OnInit {
   classes: any;
 
   constructor(
-    private dataService: DataService
+    private dataService: DataService,
+    private router: Router
   ) { }
 
   ngOnInit() {
@@ -21,5 +23,9 @@ export class ClassListComponent implements OnInit {
   getClasses() {
     this.dataService.getClasses()
       .subscribe(classes => this.classes = classes);
+  }
+
+  goToClassDetails(url: string, id) {
+    this.router.navigate(['classes/' + id]);
   }
 }

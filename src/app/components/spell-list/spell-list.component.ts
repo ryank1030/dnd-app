@@ -28,6 +28,6 @@ export class SpellListComponent implements OnInit {
   }
 
   goToSpellDetails(url: string, id) {
-    this.router.navigate(['spells/' + id])
+    this.router.navigate(['spells/' + id]);
   }
 }

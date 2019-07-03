@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import {DataService} from "../../services/data-service";
+import { DataService } from "../../services/data-service";
+import { Router } from "@angular/router";
 
 @Component({
   selector: 'app-feature-list',
@@ -8,12 +9,12 @@ import {DataService} from "../../services/data-service";
 })
 export class FeatureListComponent implements OnInit {
 
-  constructor( private dataService: DataService) {
-
-  }
+  constructor(
+    private dataService: DataService,
+    private router: Router
+    ) { }
 
   features: any;
-
 
   ngOnInit() {
     this.getFeatures();
@@ -22,8 +23,12 @@ export class FeatureListComponent implements OnInit {
   getFeatures() {
     this.dataService.getFeatures().subscribe(features => this.features = features);
   }
+
+  goToFeatureDetails(url: string, id) {
+    this.router.navigate(['features/' + id]);
+  }
   //TODO:
-  // - Implement the rest of the basic http GET calls
+  // - Implement the rest of the basic http GET calls ::DONE::
   // - Use the URL in the retrieved data to get the results of the detailed data
   // - Create a nav bar for component navigation
   // - Create a homepage

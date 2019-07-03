@@ -9,6 +9,8 @@ import { HttpClientModule } from "@angular/common/http";
 import { ClassListComponent } from './components/class-list/class-list.component';
 import { FeatureListComponent } from './components/feature-list/feature-list.component';
 import { SpellDetailsComponent } from './components/spell-details/spell-details.component';
+import { FeatureDetailsComponent } from './components/feature-details/feature-details.component';
+import { ClassDetailsComponent } from './components/class-details/class-details.component';
 
 @NgModule({
   declarations: [
@@ -17,7 +19,9 @@ import { SpellDetailsComponent } from './components/spell-details/spell-details.
     SpellListComponent,
     ClassListComponent,
     FeatureListComponent,
-    SpellDetailsComponent
+    SpellDetailsComponent,
+    FeatureDetailsComponent,
+    ClassDetailsComponent
   ],
   imports: [
     BrowserModule,

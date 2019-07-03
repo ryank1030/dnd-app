@@ -4,6 +4,8 @@ import {ClassListComponent} from "./components/class-list/class-list.component";
 import {SpellListComponent} from "./components/spell-list/spell-list.component";
 import {SpellDetailsComponent} from "./components/spell-details/spell-details.component";
 import {FeatureListComponent} from "./components/feature-list/feature-list.component";
+import { FeatureDetailsComponent } from './components/feature-details/feature-details.component';
+import { ClassDetailsComponent } from './components/class-details/class-details.component';
 
 const routes: Routes = [
   {
@@ -16,6 +18,10 @@ const routes: Routes = [
     component: ClassListComponent
   },
   {
+    path: 'classes/:id',
+    component: ClassDetailsComponent
+  },
+  {
     path: 'spells',
     component: SpellListComponent
   },
@@ -26,6 +32,10 @@ const routes: Routes = [
   {
     path: 'features',
     component: FeatureListComponent
+  },
+  {
+    path: 'features/:id',
+    component: FeatureDetailsComponent
   }
 ];
 

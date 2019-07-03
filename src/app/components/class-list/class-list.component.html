@@ -1,17 +1,17 @@
 <div *ngIf="classes">
   <h5>Class Count: {{classes.count}}</h5>
-  <table class="classes table table-striped">
+  <table class="table table-striped table-hover">
     <thead>
-    <tr>
-      <th scope="col">Name</th>
-      <th scope="col">Url</th>
-    </tr>
+      <tr>
+        <th scope="col">Name</th>
+        <th scope="col">Url</th>
+      </tr>
     </thead>
     <tbody>
-    <tr *ngFor="let result of classes.results">
-      <td>{{result.name}}</td>
-      <td>{{result.url}}</td>
-    </tr>
+      <tr *ngFor="let result of classes.results; let i = index" (click)="goToClassDetails(result.url, i+1)">
+        <td>{{result.name}}</td>
+        <td>{{result.url}}</td>
+      </tr>
     </tbody>
   </table>
 </div>
