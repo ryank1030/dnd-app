@@ -1,11 +1,13 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
-import {ClassListComponent} from "./components/class-list/class-list.component";
-import {SpellListComponent} from "./components/spell-list/spell-list.component";
-import {SpellDetailsComponent} from "./components/spell-details/spell-details.component";
-import {FeatureListComponent} from "./components/feature-list/feature-list.component";
+import {ClassListComponent} from './components/class-list/class-list.component';
+import {SpellListComponent} from './components/spell-list/spell-list.component';
+import {SpellDetailsComponent} from './components/spell-details/spell-details.component';
+import {FeatureListComponent} from './components/feature-list/feature-list.component';
 import { FeatureDetailsComponent } from './components/feature-details/feature-details.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
+import {AbilityscoreListComponent} from './components/abilityscore-list/abilityscore-list.component';
+
 
 const routes: Routes = [
   {
@@ -36,6 +38,10 @@ const routes: Routes = [
   {
     path: 'features/:id',
     component: FeatureDetailsComponent
+  },
+  {
+    path: 'abilityscores',
+    component: AbilityscoreListComponent
   }
 ];
 
@@ -45,3 +51,7 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+
+
+

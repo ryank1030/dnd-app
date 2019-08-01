@@ -1,0 +1,17 @@
+<div *ngIf="abilityscores">
+  <h5>Class Count: {{abilityscores.count}}</h5>
+  <table class="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+      <th scope="col">Url</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let result of abilityscores.results; let i = index">
+      <td>{{result.name}}</td>
+      <td>{{result.url}}</td>
+    </tr>
+    </tbody>
+  </table>
+</div>
