@@ -12,6 +12,8 @@ import { SpellDetailsComponent } from './components/spell-details/spell-details.
 import { FeatureDetailsComponent } from './components/feature-details/feature-details.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import { AbilityscoreListComponent } from './components/abilityscore-list/abilityscore-list.component';
+import { AbilityscoreDetailsComponent } from './components/abilityscore-details/abilityscore-details.component';
+
 
 @NgModule({
   declarations: [
@@ -23,7 +25,8 @@ import { AbilityscoreListComponent } from './components/abilityscore-list/abilit
     SpellDetailsComponent,
     FeatureDetailsComponent,
     ClassDetailsComponent,
-    AbilityscoreListComponent
+    AbilityscoreListComponent,
+    AbilityscoreDetailsComponent
   ],
   imports: [
     BrowserModule,

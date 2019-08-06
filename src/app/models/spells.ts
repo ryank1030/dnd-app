@@ -1,4 +1,4 @@
-import { Spelldetails } from "./spelldetails";
+import { Spelldetails } from './spelldetails';
 
 export class Spells {
   count: number;

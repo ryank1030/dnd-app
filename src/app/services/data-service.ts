@@ -38,11 +38,15 @@ export class DataService {
     return this.http.get<any>(this.url + '/classes/' + id);
   }
 
-  getFeatures(): Observable<any>{
+  getFeatures(): Observable<any> {
     return this.http.get<any>(this.url + '/features');
   }
 
   getAbilityscores(): Observable<any> {
     return this.http.get<any>(this.url + '/ability-scores');
+  }
+
+  getAbilityscoreDetails(id): Observable<any> {
+    return this.http.get<any>(this.url + '/ability-scores/' + id);
   }
 }

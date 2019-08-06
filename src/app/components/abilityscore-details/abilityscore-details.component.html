@@ -1,0 +1,24 @@
+<div *ngIf="abilityscore">
+  <table abilityscore="table table-striped table-hover">
+    <thead>
+    <tr>
+      <th scope="col">Name</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+      <td>{{abilityscore._id}}</td>
+    </tr>
+    <tr>
+      <td>{{abilityscore.index}}</td>
+    </tr>
+    <tr>
+      <td>{{abilityscore.name}}</td>
+    </tr>
+    <tr *ngFor="let desc of abilityscore.desc">
+      <td>{{desc}}</td>
+    </tr>
+
+    </tbody>
+  </table>
+</div>

@@ -7,6 +7,7 @@ import {FeatureListComponent} from './components/feature-list/feature-list.compo
 import { FeatureDetailsComponent } from './components/feature-details/feature-details.component';
 import { ClassDetailsComponent } from './components/class-details/class-details.component';
 import {AbilityscoreListComponent} from './components/abilityscore-list/abilityscore-list.component';
+import {AbilityscoreDetailsComponent} from "./components/abilityscore-details/abilityscore-details.component";
 
 
 const routes: Routes = [
@@ -42,6 +43,10 @@ const routes: Routes = [
   {
     path: 'abilityscores',
     component: AbilityscoreListComponent
+  },
+  {
+    path: 'abilityscores/:id',
+    component: AbilityscoreDetailsComponent
   }
 ];
 
